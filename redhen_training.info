@@ -1,0 +1,66 @@
+name = RedHen Training
+description = Profile for training of RedHen CRM
+core = 7.x
+
+; core
+dependencies[] = block
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_ui
+dependencies[] = image
+dependencies[] = list
+dependencies[] = number
+dependencies[] = rdf
+
+; contrib
+dependencies[] = addressfield
+dependencies[] = devel
+dependencies[] = devel_generate
+dependencies[] = token
+dependencies[] = entity
+dependencies[] = entitycache
+dependencies[] = entityreference
+dependencies[] = entity_token
+dependencies[] = relation
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = message
+dependencies[] = libraries
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = rules
+dependencies[] = rules_admin
+dependencies[] = commerce_checkout
+dependencies[] = commerce_product
+dependencies[] = commerce_recurring
+dependencies[] = commerce_cardonfile
+dependencies[] = commerce_payment_example
+dependencies[] = select_or_other
+
+; redhen
+dependencies[] = redhen
+dependencies[] = redhen_contact
+dependencies[] = redhen_dedupe
+dependencies[] = redhen_donation
+dependencies[] = redhen_org
+dependencies[] = redhen_org_group
+dependencies[] = redhen_relation
+dependencies[] = redhen_membership
+dependencies[] = redhen_note
+dependencies[] = redhen_engagement
+dependencies[] = redhen_registration
+dependencies[] = redhen_activity
+
+; features
+dependencies[] = redhen_demo
+
+; UX
+dependencies[] = date
+dependencies[] = jquery_update
+dependencies[] = module_filter
+dependencies[] = admin_menu
+dependencies[] = adminimal_admin_menu
+
+files[] = redhen_training.profile
