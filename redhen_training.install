@@ -27,13 +27,13 @@ function redhen_training_install() {
 
   variable_set('redhen_contact_connect_users', TRUE);
 
-  redhen_dev_create_note_type_terms();
+  redhen_training_create_note_type_terms();
 
   drupal_flush_all_caches();
 
-  redhen_dev_create_orgs();
+  redhen_training_create_orgs();
 
-  redhen_dev_create_contacts(array('staff', 'management', 'volunteer'));
+  redhen_training_create_contacts(array('staff', 'management', 'volunteer'));
 
   node_access_rebuild(TRUE);
 }
