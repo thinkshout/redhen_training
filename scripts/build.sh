@@ -9,7 +9,7 @@ set -e
 # profile will not be run, just built.
 #
 
-PROJECT=redhen_dev
+PROJECT=redhen_training
 
 confirm () {
   read -r -p "${1:-Are you sure? [Y/n]} " response
