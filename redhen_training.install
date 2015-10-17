@@ -79,7 +79,7 @@ function redhen_training_create_contacts($bundles, $number = 100) {
       $note->save();
     }
 
-    $scores = redhen_dev_test_engagement_scores();
+    $scores = redhen_training_test_engagement_scores();
     $num_scores = mt_rand(0, 10);
     for ($s = 0; $s < $num_scores; $s++) {
       $engagement = redhen_engagement_create(
