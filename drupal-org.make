@@ -93,6 +93,6 @@ libraries[salesforce][directory_name] = "salesforce"
 libraries[salesforce][destination] = "libraries"
 
 ; Themes
-projects[adminimal_theme][version] = "1.22"
+projects[adminimal_theme][version] = "1.23"
 projects[adminimal_theme][type] = "theme"
 projects[adminimal_theme][subdir] = "contrib"
