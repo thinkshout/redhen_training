@@ -10,209 +10,49 @@
 function redhen_demo_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'redhen_contact-management-redhen_contact_email'
-  $field_instances['redhen_contact-management-redhen_contact_email'] = array(
-    'bundle' => 'management',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'redhen_fields',
-        'settings' => array(),
-        'type' => 'redhen_email_formatter',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'redhen_contact',
-    'field_name' => 'redhen_contact_email',
-    'label' => 'Email',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'redhen_fields',
-      'settings' => array(),
-      'type' => 'redhen_email_widget',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'redhen_contact-staff-redhen_contact_email'
-  $field_instances['redhen_contact-staff-redhen_contact_email'] = array(
-    'bundle' => 'staff',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'redhen_fields',
-        'settings' => array(),
-        'type' => 'redhen_email_formatter',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'redhen_contact',
-    'field_name' => 'redhen_contact_email',
-    'label' => 'Email',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'redhen_fields',
-      'settings' => array(),
-      'type' => 'redhen_email_widget',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'redhen_contact-volunteer-field_address'
-  $field_instances['redhen_contact-volunteer-field_address'] = array(
-    'bundle' => 'volunteer',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'redhen_contact|volunteer|field_address|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'country' => 'AF',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addressfield',
-        'settings' => array(
-          'format_handlers' => array(
-            0 => 'address',
-          ),
-          'use_widget_handlers' => 1,
-        ),
-        'type' => 'addressfield_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'redhen_contact',
-    'field_name' => 'field_address',
-    'label' => 'Address',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield',
-      'settings' => array(
-        'available_countries' => array(
-          'US' => 'US',
-        ),
-        'format_handlers' => array(
-          'address' => 'address',
-          'address-hide-country' => 'address-hide-country',
-          'organisation' => 0,
-          'name-full' => 0,
-          'name-oneline' => 0,
-        ),
-      ),
-      'type' => 'addressfield_standard',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'redhen_contact-volunteer-redhen_contact_email'
-  $field_instances['redhen_contact-volunteer-redhen_contact_email'] = array(
-    'bundle' => 'volunteer',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'redhen_fields',
-        'settings' => array(),
-        'type' => 'redhen_email_formatter',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'redhen_contact',
-    'field_name' => 'redhen_contact_email',
-    'label' => 'Email',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'redhen_fields',
-      'settings' => array(),
-      'type' => 'redhen_email_widget',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'registration-demo_registration-field_meal_preference'
-  $field_instances['registration-demo_registration-field_meal_preference'] = array(
-    'bundle' => 'demo_registration',
+  // Exported field_instance: 'redhen_note-redhen_note-field_subject'.
+  $field_instances['redhen_note-redhen_note-field_subject'] = array(
+    'bundle' => 'redhen_note',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'list',
+        'label' => 'inline',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 1,
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
-    'entity_type' => 'registration',
-    'field_name' => 'field_meal_preference',
-    'label' => 'Meal preference',
-    'required' => 0,
+    'entity_type' => 'redhen_note',
+    'field_name' => 'field_subject',
+    'label' => 'Subject',
+    'required' => 1,
     'settings' => array(
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 40,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Address');
-  t('Body');
-  t('Email');
-  t('Name');
+  t('Subject');
 
   return $field_instances;
 }
