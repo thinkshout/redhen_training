@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Base Events feature.
+ */
+
+include_once 'salesforce_training_base_registration.features.inc';
