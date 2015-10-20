@@ -15,4 +15,6 @@ features[field_instance][] = redhen_contact-general-field_address
 features[field_instance][] = redhen_contact-general-field_phone
 features[field_instance][] = redhen_contact-general-redhen_contact_email
 features[redhen_contact_type][] = general
+features[user_permission][] = edit own redhen contact
+features[user_permission][] = view own redhen contact
 project path = profiles/redhen_training/modules/custom
