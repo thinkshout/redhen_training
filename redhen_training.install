@@ -25,7 +25,18 @@ function redhen_training_install() {
 
   standard_install();
 
+  variable_set('user_register', USER_REGISTER_VISITORS);
+  variable_set('user_email_verification', FALSE);
+
   variable_set('redhen_contact_connect_users', TRUE);
+  variable_set('redhen_contact_mirror_email', TRUE);
+  variable_set('redhen_contact_reg', TRUE);
+  variable_set('redhen_contact_reg_update', TRUE);
+  variable_set('redhen_contact_reg_type', 'general');
+  variable_set('redhen_contact_require_email', TRUE);
+  variable_set('redhen_admin_path', TRUE);
+
+  variable_set('comment_default_mode_event', COMMENT_NODE_HIDDEN);
 
   redhen_training_create_note_type_terms();
 
