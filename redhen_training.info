@@ -60,6 +60,8 @@ dependencies[] = salesforce
 
 ; features
 dependencies[] = redhen_demo
+dependencies[] = salesforce_training_base_contact
+dependencies[] = salesforce_training_base_registration
 
 ; UX
 dependencies[] = date

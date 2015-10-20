@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Base Contact feature.
+ */
+
+include_once 'salesforce_training_base_contact.features.inc';
