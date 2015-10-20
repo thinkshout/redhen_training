@@ -15,12 +15,8 @@ function salesforce_training_solutions_default_salesforce_mapping() {
     "label" : "Contacts",
     "sync_triggers" : "63",
     "salesforce_object_type" : "Contact",
-    "salesforce_record_types_allowed" : {
-      "012000000000000AAA" : "012000000000000AAA",
-      "012i0000000xMD7AAM" : 0,
-      "012i0000000xMD2AAM" : 0
-    },
-    "salesforce_record_type_default" : "012000000000000AAA",
+    "salesforce_record_types_allowed" : { "default" : "default" },
+    "salesforce_record_type_default" : "default",
     "drupal_entity_type" : "redhen_contact",
     "drupal_bundle" : "general",
     "field_mappings" : [
