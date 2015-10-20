@@ -19,11 +19,13 @@ dependencies[] = addressfield
 dependencies[] = devel
 dependencies[] = devel_generate
 dependencies[] = token
+dependencies[] = diff
 dependencies[] = entity
 dependencies[] = entitycache
 dependencies[] = entityreference
 dependencies[] = entity_token
 dependencies[] = relation
+dependencies[] = registration
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = message
@@ -52,6 +54,9 @@ dependencies[] = redhen_note
 dependencies[] = redhen_engagement
 dependencies[] = redhen_registration
 dependencies[] = redhen_activity
+
+; salesforce
+dependencies[] = salesforce
 
 ; features
 dependencies[] = redhen_demo
