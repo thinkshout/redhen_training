@@ -1,0 +1,10 @@
+name = Salesforce Solutions
+description = This module contains completion code and configuration for the exercises that are part of the ThinkShout Salesforce Training
+core = 7.x
+package = Salesforce Training
+dependencies[] = entity
+dependencies[] = salesforce_mapping
+features[features_api][] = api:2
+features[salesforce_mapping][] = contacts
+features[salesforce_mapping][] = notes
+project path = profiles/redhen_training/modules/custom

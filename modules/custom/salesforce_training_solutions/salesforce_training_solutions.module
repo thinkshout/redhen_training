@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Salesforce Solutions feature.
+ */
+
+include_once 'salesforce_training_solutions.features.inc';
