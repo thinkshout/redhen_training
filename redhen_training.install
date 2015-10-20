@@ -44,7 +44,7 @@ function redhen_training_install() {
 
   redhen_training_create_orgs();
 
-  redhen_training_create_contacts(array('staff', 'management', 'volunteer'));
+  redhen_training_create_contacts(array('general'));
 
   node_access_rebuild(TRUE);
 }
