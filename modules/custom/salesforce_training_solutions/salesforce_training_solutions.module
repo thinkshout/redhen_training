@@ -5,3 +5,26 @@
  */
 
 include_once 'salesforce_training_solutions.features.inc';
+
+/**
+ * Implements hook_salesforce_push_params_alter().
+ *
+ * Often, data on Drupal will not be naturally formulated the same way as data
+ * on Salesforce. You can use push_params_alter to clean this data up. It is
+ * also useful when the entity relationships and the object relationships don't
+ * match precisely, as you see below with the way Users and Contacts on Drupal
+ * connect with Salesforce Contacts.
+ */
+function salesforce_training_solutions_salesforce_push_params_alter(&$params, $mapping, $entity_wrapper) {
+  switch ($mapping->name) {
+    case 'registrations':
+      // If a registration has already been sent to Salesforce, Salesforce
+      // already knows which Contact and Campaign to connect it to. If you try
+      // to send values for these fields to Salesforce, even the same ones, it
+      // will reject them, as these values cannot be changed on Salesforce's
+      // Campaign Member objects, so we much be sure not to submit these values
+      // in such cases.
+      // First, we load up the mapping object for this entity:
+        $params['ContactId'] = $entity_wrapper->user->redhen_contact->salesforce_mapping_object->salesforce_id->value();
+  }
+}
