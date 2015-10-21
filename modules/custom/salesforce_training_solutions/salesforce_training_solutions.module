@@ -39,3 +39,21 @@ function salesforce_training_solutions_salesforce_push_params_alter(&$params, $m
       }
   }
 }
+
+/**
+ * Implements hook_salesforce_pull_entity_value_alter().
+ *
+ * When pulling Campaign Member values from Salesforce, we must look up the
+ * appropriate User, since Registrations link to Contacts rather than Users.
+ */
+function salesforce_training_solutions_salesforce_pull_entity_value_alter(&$value, $field_map, $sf_object) {
+  if ($sf_object['attributes']['type'] == 'CampaignMember' && $field_map['drupal_field']['fieldmap_value'] == 'user') {
+    // $value is a Wrapped RedHen Contact object. We want to replace it with
+    // that Contact's correlated User. Note that $value wants a Wrapper object,
+    // which is exactly what we get when we ask a Contact Wrapper ($value) for
+    // it's "user" property, but due to oddities of the entity system we need
+    // to actually get the User value and create a fresh wrapper.
+    $user = $value->user->value();
+    $value = entity_metadata_wrapper('user', $user);
+  }
+}
