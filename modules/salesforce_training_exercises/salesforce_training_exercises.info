@@ -1,0 +1,5 @@
+name = Exercises
+core = 7.x
+package = Salesforce Training
+dependencies[] = salesforce
+features[features_api][] = api:2
