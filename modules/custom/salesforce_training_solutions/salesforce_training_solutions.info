@@ -6,5 +6,7 @@ dependencies[] = entity
 dependencies[] = salesforce_mapping
 features[features_api][] = api:2
 features[salesforce_mapping][] = contacts
+features[salesforce_mapping][] = events
 features[salesforce_mapping][] = notes
+features[salesforce_mapping][] = registrations
 project path = profiles/redhen_training/modules/custom
