@@ -41,7 +41,6 @@ features[redhen_org_type][] = business
 features[redhen_org_type][] = foundation
 features[redhen_org_type][] = group
 features[redhen_org_type][] = shelter
-features[user_role][] = administrator
 features[user_role][] = member
 features[variable][] = redhen_admin_path
 features[variable][] = redhen_contact_alter_username
