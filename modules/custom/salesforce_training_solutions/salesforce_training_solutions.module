@@ -57,3 +57,13 @@ function salesforce_training_solutions_salesforce_pull_entity_value_alter(&$valu
     $value = entity_metadata_wrapper('user', $user);
   }
 }
+
+/**
+ * Implements hook_salesforce_query_alter().
+ */
+function salesforce_training_solutions_salesforce_query_alter(SalesforceSelectQuery &$query) {
+  if ($query->objectType == 'Campaign') {
+    // Only pull Campaigns which are marked "Active".
+    $query->addCondition('IsActive', 'TRUE');
+  }
+}
