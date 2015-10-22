@@ -17,3 +17,18 @@ function redhen_demo_user_view($account, $view_mode, $langcode) {
     }
   }
 }
+
+/**
+ * Implements hook_entity_view().
+ */
+function redhen_demo_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type == 'node' && $entity->type == 'blog' && $view_mode == 'full') {
+    global $user;
+    $contact = redhen_contact_load_by_user($user);
+    if ($contact) {
+      list($id, $vid, $bundle) = entity_extract_ids($type, $entity);
+      $engagement = redhen_engagement_create('comment', $contact->contact_id, 'Viewed a blog post', $type, $id);
+      $engagement->save();
+    }
+  }
+}
