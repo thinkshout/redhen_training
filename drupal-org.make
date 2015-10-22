@@ -13,6 +13,7 @@ projects[] = entitycache
 projects[] = entityreference
 projects[] = features
 projects[] = token
+projects[] = strongarm
 projects[] = views
 projects[] = rules
 projects[entity][version] = 1.6

@@ -32,6 +32,7 @@ dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = rules
 dependencies[] = rules_admin
+dependencies[] = strongarm
 dependencies[] = commerce_checkout
 dependencies[] = commerce_product
 dependencies[] = commerce_recurring
