@@ -82,7 +82,7 @@ function redhen_demo_default_redhen_membership_type() {
   $items['premium'] = entity_import('redhen_membership_type', '{
     "name" : "premium",
     "label" : "Premium",
-    "role_id" : "4",
+    "role_id" : "3",
     "locked" : "0",
     "weight" : "0",
     "data" : null,
