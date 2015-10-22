@@ -17,6 +17,20 @@ include_once 'salesforce_training_solutions.features.inc';
  */
 function salesforce_training_solutions_salesforce_push_params_alter(&$params, $mapping, $entity_wrapper) {
   switch ($mapping->name) {
+    case 'notes':
+      // If a note has already been sent to Salesforce, Salesforce already knows
+      // which Contact to connect it to. If you try to send a value, even the
+      // same ones, it will reject the entire update, so we much be sure not to
+      // submit these values in such cases.
+      // First, we load up the mapping object for this entity:
+      $mapping_object = isset($entity_wrapper->salesforce_mapping_object) ? $entity_wrapper->salesforce_mapping_object->value() : FALSE;
+      if ($mapping_object && $mapping_object->salesforce_id) {
+        // The object loaded and already has a valid SF ID, so we unset the
+        // Parent ID value:
+        unset($params['ParentId']);
+      }
+      break;
+
     case 'registrations':
       // If a registration has already been sent to Salesforce, Salesforce
       // already knows which Contact and Campaign to connect it to. If you try
@@ -37,6 +51,8 @@ function salesforce_training_solutions_salesforce_push_params_alter(&$params, $m
         // We help the Salesforce module find the correct contact via the User:
         $params['ContactId'] = $entity_wrapper->user->redhen_contact->salesforce_mapping_object->salesforce_id->value();
       }
+    break;
+
   }
 }
 
