@@ -19,11 +19,12 @@ function redhen_training_install() {
     ->condition('type', 'theme')
     ->condition('name', 'adminimal')
     ->execute();
+
+  standard_install();
+
   variable_set('admin_theme', 'adminimal');
   variable_set('theme_default', 'bartik');
   variable_set('node_admin_theme', '1');
-
-  standard_install();
 
   variable_set('redhen_contact_connect_users', TRUE);
 
