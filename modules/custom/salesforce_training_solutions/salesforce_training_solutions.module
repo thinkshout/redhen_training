@@ -25,7 +25,7 @@ function salesforce_training_solutions_salesforce_push_params_alter(&$params, $m
       // Campaign Member objects, so we much be sure not to submit these values
       // in such cases.
       // First, we load up the mapping object for this entity:
-      $mapping_object = $entity_wrapper->salesforce_mapping_object->value();
+      $mapping_object = isset($entity_wrapper->salesforce_mapping_object) ? $entity_wrapper->salesforce_mapping_object->value() : FALSE;
       if ($mapping_object && $mapping_object->salesforce_id) {
         // The object loaded and already has a valid SF ID, so we unset the
         // Contact and Campaign reference values:
