@@ -88,7 +88,7 @@ projects[salesforce][subdir] = "salesforce"
 
 ; Salesforce PHP ToolKit
 libraries[salesforce][download][type] = "git"
-libraries[salesforce][download][url] = "git://github.com/developerforce/Force.com-Toolkit-for-PHP"
+libraries[salesforce][download][url] = "https://github.com/developerforce/Force.com-Toolkit-for-PHP.git"
 libraries[salesforce][directory_name] = "salesforce"
 libraries[salesforce][destination] = "libraries"
 
