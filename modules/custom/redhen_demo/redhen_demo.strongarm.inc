@@ -28,7 +28,7 @@ function redhen_demo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'redhen_contact_connect_users';
-  $strongarm->value = 1;
+  $strongarm->value = TRUE;
   $export['redhen_contact_connect_users'] = $strongarm;
 
   $strongarm = new stdClass();
