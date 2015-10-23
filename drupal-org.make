@@ -9,6 +9,7 @@ projects[] = admin_menu
 projects[] = addressfield
 projects[] = ctools
 projects[] = devel
+projects[] = diff
 projects[] = entitycache
 projects[] = entityreference
 projects[] = features
