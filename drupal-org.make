@@ -15,10 +15,12 @@ projects[] = features
 projects[] = token
 projects[] = views
 projects[] = rules
+projects[] = registration
 projects[entity][version] = 1.6
 projects[relation][version] = 1.0
 projects[message][version] = 1.10
 projects[libraries][version] = 2.2
+
 
 ; redhen
 projects[redhen][type] = "module"
